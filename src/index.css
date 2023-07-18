@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,html{
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+}
+
+.App{
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.content-area{
+  background: #4A4E69;
+  min-height: 100vh;
+  height: max-content;
+
+}
+.content.loader{ 
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-15%);
+}
+
+
+.Navbar{
+  width: 100%;
+  background: #22223B;
+  padding: .6rem 0;
+}
+.Navbar h2{
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.8rem;
+  color: #fff;
+}
+.Filter{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+.Filter button{
+  padding: .5rem;
+  font-size: 1.3rem;
+  cursor: pointer;
+  margin: 1rem 0;
+  border-radius: .3rem;
+  background: #22223B;
+  color: white;
+  border: transparent;
+
+
+}
+.Filter button:hover{
+  border: 1px solid rgb(116, 114, 114);
+}
+.Filter button.active{
+  border: 2px solid white;
+}
+.Cards{
+  width: max-content;
+  margin: 0 auto;
+  display: grid;
+  grid-auto-rows: 350px;
+  grid-template-columns: repeat(3, 300px);
+  gap: .8rem;
+  justify-content: center;
+}
+.Card{
+  width: 100%;
+  background: #22223B;
+  /* border: 1px solid red; */
+  /* padding: .5rem; */
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border-radius: .5rem;
+  overflow: hidden;
+
+}
+.image .btn-like{
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  margin:auto;
+  top: 40%;
+  right: 4%;
+  border-radius: 50%;
+  border: none;
+  font-size: 1.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+}
+.Card .image{
+  width: 100%;
+  height: 166.5px;
+  border: 1px solid rgba(128, 128, 128, 0.295);
+  border-radius: .5rem;
+  overflow: hidden;
+}
+.Card .image img{
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+
+}
+.course-title{
+  color: white;
+  font-weight: 600;
+  margin: .5rem 0;
+}
+.course-details{
+  padding: .7rem;
+  
+}
+.course-details .course-description{
+  color: rgb(217, 217, 217);
+}
+
+@media (max-width: 600px) {
+  .Cards{
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-wrap:wrap;
+  }
+  .Card{
+    height: 250px;
+    width: 214.3px;
+  }
+}
